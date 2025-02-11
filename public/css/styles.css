@@ -1,20 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
-:root{
-    --bg-darkmode:#141F2F;
+
+:root {
+    --bg-darkmode: #141F2F;
     --bg-ligthmode: #E3E7EE;
 
-    --font-darkmode:#B7B7B7;
-    --font-ligthmode:#263959;
+    --font-darkmode: #B7B7B7;
+    --font-ligthmode: #263959;
 
-    --item-darkmode:#25273C;
-    --item-ligthmode:#F7F5F5;
+    --item-darkmode: #25273C;
+    --item-ligthmode: #F7F5F5;
 
-    --check-darkmode:#182233;
-    --check-ligthmode:#D1D5DB;
+    --check-darkmode: #182233;
+    --check-ligthmode: #D1D5DB;
 
 }
- 
-body{
+
+body {
     display: flex;
     justify-content: space-around;
     background-image: url(../images/header.png);
@@ -25,22 +26,25 @@ body{
     font-family: 'Ubunto', sans-serif;
     margin: 0;
 }
-.container{
+
+.container {
     margin-top: 230px;
     flex-grow: 0;
 
 }
-.header{
+
+.header {
     flex-direction: row;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-h1{
+
+h1 {
     flex-grow: 0;
 }
 
-.darkmode-toggle{
+.darkmode-toggle {
     width: 30px;
     height: 30px;
     background-image: url(../images/moon.svg);
@@ -48,7 +52,8 @@ h1{
     background-repeat: no-repeat;
     flex-grow: 0;
 }
-input[type=text]{
+
+input[type=text] {
     padding: 20px 10px;
     font-size: 22px;
     width: calc(100% - 20px);
@@ -57,25 +62,26 @@ input[type=text]{
     background-color: var(--bg-ligthmode);
 }
 
-.item{
+.item {
     display: flex;
     align-items: center;
     background-color: var(--item-ligthmode);
     color: var(--font-ligthmode);
-    padding:10px;
+    padding: 10px;
     height: 45px;
     font-size: 22px;
     border-bottom: solid 1px #D1D5DB;
 }
 
-input[type=checkbox]{
+input[type=checkbox] {
     width: 30px;
     height: 30px;
     margin: 20px;
     position: relative;
     cursor: pointer;
 }
-input[type=checkbox]:before{
+
+input[type=checkbox]:before {
     content: "";
     display: block;
     position: absolute;
@@ -86,11 +92,11 @@ input[type=checkbox]:before{
     background-color: var(--check-ligthmode);
 }
 
-input[type=checkbox]:checked:before{
+input[type=checkbox]:checked:before {
     background-color: #1E80EF;
 }
 
-input[type=checkbox]:checked:after{
+input[type=checkbox]:checked:after {
     content: "";
     border: solid #FFF;
     border-width: 0 3px 3px 0;
@@ -102,11 +108,12 @@ input[type=checkbox]:checked:after{
     top: 3px;
     left: 9px;
 }
-.item-checked{
+
+.item-checked {
     text-decoration: line-through;
 }
 
-.footer{
+.footer {
     flex-direction: row;
     display: flex;
     justify-content: space-between;
@@ -118,61 +125,62 @@ input[type=checkbox]:checked:after{
     gap: 15px;
 }
 
-.footer div{
+.footer div {
     margin: 0 5px;
 }
 
-.footer a{
+.footer a {
     margin: 0 5px;
     text-decoration: none;
     color: var(--font-ligthmode);
 }
 
-.footer a:hover{
+.footer a:hover {
     color: #8ac2fe;
 }
-.footer a.active{
+
+.footer a.active {
     color: #116acc;
 }
 
-body.darkmode{
+body.darkmode {
     background-color: var(--bg-darkmode);
 }
 
-.darkmode .darkmode-toggle{
+.darkmode .darkmode-toggle {
     background-image: url(../images/sun.svg);
 }
 
-.darkmode input[type=text]{
+.darkmode input[type=text] {
     background-color: var(--bg-darkmode);
     color: var(--font-darkmode);
 }
 
-.darkmode .item{
+.darkmode .item {
     background-color: var(--item-darkmode);
     color: var(--font-darkmode);
 }
 
-.darkmode input[type=checkbox]:before{
+.darkmode input[type=checkbox]:before {
     background-color: var(--check-darkmode);
 }
 
-.darkmode .footer{
+.darkmode .footer {
     background-color: var(--item-darkmode);
     color: var(--font-darkmode);
 }
 
-.footer a{
+.footer a {
     color: var(--font-darkmode);
 }
 
-input[type=checkbox]:checked:before{
+input[type=checkbox]:checked:before {
     background-color: #1E80EF;
 }
 
 @media (max-width: 600px) {
-    .container{
-        margin-top:150px ;
+    .container {
+        margin-top: 150px;
         width: 90%;
     }
 
