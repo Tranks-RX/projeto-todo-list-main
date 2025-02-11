@@ -8,7 +8,7 @@
             href="https://cache.refatorando.com/wp-content/uploads/2023/05/Favicon_Refatorando-1-100x100.png"
             type="image/x-icon">
         <link rel="stylesheet" href="public/css/styles.css">
-        <script src="./public/js/script.js" defer></script>
+        <script src="./public/js/script.js" defer></script> <!-- Adicionado defer -->
     </head>
     <body class="darkmode">
         <div class="container">
@@ -16,39 +16,43 @@
                 <h1>To-do List</h1>
                 <a href="#" class="darkmode-toggle"></a>
             </div>
-            <input type="text" placeholder="Insira o To-do aqui..."/>
-            <div class="item">
-                <input type="checkbox" checked>
-                <span class="item-checked">Ler 10 páginas de um livro</span>
-            </div>
-            <div class="item">
-                <input type="checkbox">
-                <span>Meditar </span>
-            </div>
-            <div class="item">
-                <input type="checkbox">
-                <span>Editar 2 vídeos</span>
-            </div>
-            <div class="item">
-                <input type="checkbox">
-                <span>Criar portfólio</span>
-            </div>
-            <div class="item">
-                <input type="checkbox">
-                <span>Academia</span>
-            </div>
-        </div>
+            
+            <!-- Adicionado id="new-task" -->
+            <input type="text" id="new-task" placeholder="Insira o To-do aqui..."/>
 
-        <div class="footer">
-            <div id="task-count">4 itens restantes</div>
-            <div class="filter">
-                <a href="#todos" class="filter-btn active" data-filter="todos">Todos</a>
-                <a href="#ativos" class="filter-btn" data-filter="ativos">Ativos</a>
-                <a href="#concluidos" class="filter-btn" data-filter="concluidos">Concluídos</a>
+            <!-- Adicionado id="task-list" para que o JS possa manipular -->
+            <div id="task-list">
+                <div class="item">
+                    <input type="checkbox" checked>
+                    <span class="item-checked">Ler 10 páginas de um livro</span>
+                </div>
+                <div class="item">
+                    <input type="checkbox">
+                    <span>Meditar </span>
+                </div>
+                <div class="item">
+                    <input type="checkbox">
+                    <span>Editar 2 vídeos</span>
+                </div>
+                <div class="item">
+                    <input type="checkbox">
+                    <span>Criar portfólio</span>
+                </div>
+                <div class="item">
+                    <input type="checkbox">
+                    <span>Academia</span>
+                </div>
             </div>
-            <a href="#" id="clear-completed">Limpeza Completa</a>
-        </div>
-    </div>
-</body>
 
+            <div class="footer">
+                <div id="task-count">4 itens restantes</div> <!-- Corrigido para usar task-count corretamente -->
+                <div class="filter">
+                    <a href="#todos" class="filter-btn active" data-filter="todos">Todos</a>
+                    <a href="#ativos" class="filter-btn" data-filter="ativos">Ativos</a>
+                    <a href="#concluidos" class="filter-btn" data-filter="concluidos">Concluídos</a>
+                </div>                
+                <a href="#" id="clear-completed">Limpeza Completa</a> <!-- Adicionado id -->
+            </div>
+        </div>        
+    </body>
 </html>
